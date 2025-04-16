@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     }
 
     // OpenAI APIに送信するプロンプトを作成
-    const prompt = `あなたはMBTIの専門家です。以下のメッセージを、相手のMBTIタイプである「${mbtiType}」の人が受け入れやすいように、その性格特性（例: ${mbtiType}の人は論理的、感情的、内向的、外向的など）を考慮して、より丁寧で効果的な表現に変換してください。必要に応じて絵文字を使用してください。変換後のメッセージのみを出力してください。\n\n元のメッセージ:\n"${message}"`;
+    const prompt = `あなたはMBTIの専門家です。以下のメッセージを、相手のMBTIタイプである「${mbtiType}」の人が受け入れやすいように、その性格特性（例: ${mbtiType}の人は論理的、感情的、内向的、外向的など）を考慮して、より丁寧で効果的な表現に変換してください。必要に応じて絵文字を使用してください（必ずしもつける必要はありません）。変換後のメッセージのみを出力してください。\n\n元のメッセージ:\n"${message}"`;
 
     // OpenAI API を呼び出す
     const completion = await openai.chat.completions.create({

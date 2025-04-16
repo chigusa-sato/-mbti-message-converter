@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MBTI Message Converter
 
-## Getting Started
+## 概要 (Overview)
 
-First, run the development server:
+このアプリケーションは、入力されたメッセージを、指定された相手のMBTIタイプに合わせてより伝わりやすい表現に変換するウェブアプリケーションです。OpenAI APIを利用して、MBTIの各性格特性を考慮したメッセージの調整を行います。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 機能 (Features)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **メッセージ入力**: ユーザーが変換したいメッセージを入力できます。
+*   **MBTIタイプ選択**: 相手のMBTIタイプを4つの気質グループ（分析家、外交官、番人、探検家）から分かりやすく選択できます。
+*   **AIによるメッセージ変換**: OpenAI API (GPT-3.5 Turboなど) を使用して、入力メッセージと選択されたMBTIタイプに基づき、適切な表現に変換します。
+*   **結果表示**: 変換後のメッセージを表示します。
+*   **ローディング・エラー表示**: API通信中のローディング状態や、エラーが発生した場合のメッセージを表示します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 技術スタック (Tech Stack)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **フレームワーク**: Next.js (App Router)
+*   **言語**: TypeScript
+*   **UI**: React
+*   **スタイリング**: Tailwind CSS (with @tailwindcss/forms)
+*   **AI**: OpenAI API
